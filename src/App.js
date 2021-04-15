@@ -1,8 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import One from './One'
+import Two from './Two'
+import Three from './Three'
+import Four from './Four'
+import Five from './Five'
+import Six from './Six'
+import Seven from './Seven'
+import Eight from './Eight'
+import Nine from './Nine'
+import Ten from './Ten'
 
 class App extends Component {
   render() {
