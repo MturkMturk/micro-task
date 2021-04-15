@@ -1,22 +1,20 @@
+import logo from './logo.svg';
 import './App.css';
-import React, { PureComponent } from "react"
-import Iframe from "./iframe.js"
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import One from './One'
 
-class App extends PureComponent{
-  render(){
+class App extends Component {
+  render() {
     return (
-      <div className="App">
-        <Iframe
-          url="https://cdn.jwplayer.com/players/ECj6NYMl-PzqYXf16.html"
-          width="450px"
-          height="450px"
-          id="myId"
-          className="myClassname"
-          display="initial"
-          position="relative"
-          allowFullScreen
-        />
-      </div>
+      <Router>
+        <div className="App">
+          <Switch>
+              <Route exact path='/one' component={One} />
+          </Switch>
+        </div>
+      </Router>
+      
     );
   }
 }
