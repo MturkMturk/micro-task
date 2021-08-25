@@ -7,7 +7,7 @@ class Four extends Component{
     return (
       <div>
         <Iframe
-          url="https://cdn.jwplayer.com/players/9e0UQhWw-PzqYXf16.html"
+          url="https://cdn.jwplayer.com/players/ViwiDyQW-PzqYXf16.html"
           width="450px"
           height="450px"
           id="myId"
