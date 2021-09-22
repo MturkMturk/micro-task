@@ -7,7 +7,7 @@ class One extends Component{
     return (
       <div>
         <Iframe
-          url="https://cdn.jwplayer.com/players/cAqD0NUe-PzqYXf16.html"
+          url="https://cdn.jwplayer.com/players/Ig8s8ZfC-PzqYXf16.html"
           width="450px"
           height="450px"
           id="myId"
