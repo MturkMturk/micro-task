@@ -3,8 +3,9 @@ import React, { Component } from "react"
 import Iframe from "./iframe.js"
 
 class Five extends Component{
-  console.log("Hello World");
+
   render(){
+    console.log("Hello World");
     return (
       <div>
         <Iframe
