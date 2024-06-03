@@ -24,6 +24,7 @@ class Five extends Component {
   };
 
   render() {
+    console.log("Hello World");
     return (
       <div>
         {!this.state.isAuthenticated ? (
