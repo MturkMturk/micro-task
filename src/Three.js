@@ -3,19 +3,53 @@ import React, { Component } from "react"
 import Iframe from "./iframe.js"
 
 class Three extends Component{
-  render(){
+  state = {
+    password: '',
+    isAuthenticated: false,
+    enteredPassword: '',
+  };
+
+  handleChange = (event) => {
+    this.setState({ enteredPassword: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const hardcodedPassword = 'hardcoded'; // Replace with your hardcoded password
+    if (this.state.enteredPassword === hardcodedPassword) {
+      this.setState({ isAuthenticated: true });
+    } else {
+      alert('Incorrect password');
+    }
+  };
+
+  render() {
     return (
       <div>
-        <Iframe
-          url="https://cdn.jwplayer.com/players/f9KQ2If1-PzqYXf16.html"
-          width="450px"
-          height="450px"
-          id="myId"
-          className="myClassname"
-          display="initial"
-          position="relative"
-          allowFullScreen
-        />
+        {!this.state.isAuthenticated ? (
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Enter Password:
+              <input
+                type="password"
+                value={this.state.enteredPassword}
+                onChange={this.handleChange}
+              />
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        ) : (
+          <Iframe
+            url="https://cdn.jwplayer.com/players/HXtdRpnG-PzqYXf16.html"
+            width="450px"
+            height="450px"
+            id="myId"
+            className="myClassname"
+            display="initial"
+            position="relative"
+            allowFullScreen
+          />
+        )}
       </div>
     );
   }
